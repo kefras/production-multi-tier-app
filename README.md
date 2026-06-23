@@ -34,7 +34,7 @@ An automated, production-grade Continuous Deployment (CD) pipeline that bridges 
 > 💡 **📍 ARCHITECTURE DIAGRAM**
 
 <p align="center">
-  <img src="architecture.png" alt="Architecture Diagram.png" width="650">
+  <img src="architecture.png.png" alt="Architecture Diagram" width="650">
 </p>
 ---
 
