@@ -6,8 +6,6 @@ An automated, production-grade Continuous Deployment (CD) pipeline that bridges 
 
 
 
-
-
   ┌─────────────────┐      push      ┌─────────────────┐      triggers     ┌────────────────────────┐
   │  Local Laptop   │───────────────>│  GitHub Repo    │──────────────────>│ GitHub Actions Runner  │
   │(Git Workspace)  │                │(multi-tier-app) │                   │ (Ubuntu-Latest Host)   │
@@ -28,8 +26,7 @@ An automated, production-grade Continuous Deployment (CD) pipeline that bridges 
   │                                                                   └──────────────────────────┘  │
   └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 
-
-
+---
 
 > 💡 **📍 ARCHITECTURE DIAGRAM**
 
