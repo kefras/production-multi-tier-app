@@ -6,26 +6,27 @@ An automated, production-grade Continuous Deployment (CD) pipeline that bridges 
 
 
 
-┌─────────────────┐      push      ┌─────────────────┐      triggers     ┌────────────────────────┐
-│  Local Laptop   │───────────────>│  GitHub Repo    │──────────────────>│ GitHub Actions Runner  │
-│(Git Workspace)  │                │(multi-tier-app) │                   │ (Ubuntu-Latest Host)   │
-└─────────────────┘                └─────────────────┘                   └───────────┬────────────┘
-│
-│ Establishes secure
-│ SSH Tunnel on Port 22
-│ (Verified via Secrets)
-▼
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ AWS EC2 Cloud Host (t3.micro Instance)                                                           │
-│                                                                                                 │
-│  ┌───────────────────────┐         Drives Rolling Updates         ┌──────────────────────────┐  │
-│  │   Linux Swap Space    │───────────────────────────────────────>│   Docker Compose Engine  │  │
-│  │ (2GB SSD Buffer RAM)  │  (Mitigates Out-Of-Memory Panics)     │ ┌──────────────────────┐ │  │
-│  └───────────────────────┘                                        │ │   scalable-web:nginx │ │  │
-│                                                                   │ └──────────────────────┘ │  │
-│                                                                   └──────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────────────────────────────────┘
 
+
+  ┌─────────────────┐      push      ┌─────────────────┐      triggers     ┌────────────────────────┐
+  │  Local Laptop   │───────────────>│  GitHub Repo    │──────────────────>│ GitHub Actions Runner  │
+  │(Git Workspace)  │                │(multi-tier-app) │                   │ (Ubuntu-Latest Host)   │
+  └─────────────────┘                └─────────────────┘                   └───────────┬────────────┘
+  │
+  │ Establishes secure
+  │ SSH Tunnel on Port 22
+  │ (Verified via Secrets)
+  ▼
+  ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ AWS EC2 Cloud Host (t3.micro Instance)                                                          │
+  │                                                                                                 │
+  │  ┌───────────────────────┐         Drives Rolling Updates         ┌──────────────────────────┐  │
+  │  │   Linux Swap Space    │───────────────────────────────────────>│   Docker Compose Engine  │  │
+  │  │ (2GB SSD Buffer RAM)  │  (Mitigates Out-Of-Memory Panics)      │ ┌──────────────────────┐ │  │
+  │  └───────────────────────┘                                        │ │   scalable-web:nginx │ │  │
+  │                                                                   │ └──────────────────────┘ │  │
+  │                                                                   └──────────────────────────┘  │
+  └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 
