@@ -36,7 +36,9 @@ An automated, production-grade Continuous Deployment (CD) pipeline that bridges 
 <p align="center">
   <img src="architecture.png.png" alt="Architecture Diagram" width="750">
 </p>
+
 ---
+
 ## ⚡ Key Features
 
 * **Automated Git-Triggered Continuous Deployment:** Eliminates manual server intervention by tracking production branch pushes and triggering isolated workflow jobs.
