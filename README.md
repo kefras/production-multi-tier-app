@@ -31,11 +31,11 @@ An automated, production-grade Continuous Deployment (CD) pipeline that bridges 
 
 
 
+> 💡 **📍 ARCHITECTURE DIAGRAM**
 
-> 💡 **📍 ARCHITECTURE DIAGRAM INSERTION POINT**
-> Drop your visual cloud architectural schematic diagram image file into a folder named `docs/` inside this directory workspace. Replace this block with your live reference link:
-> `![System Architecture Blueprint](docs/architecture.png)`
-
+<p align="center">
+  <img src="./architecture.png" alt="Architecture Diagram" width="650">
+</p>
 ---
 
 ## ⚡ Key Features
